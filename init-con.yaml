@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: init-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      initContainers:
+       - name: icon
+         image: ubuntu:22.04
+         command: ["/bin/bash"]
+         args: ["-c","echo '<h1>hello from initContainer<h1>' $HOSTNAME > /data/index.html"]
+         volumeMounts:
+         - name: myvol
+           mountPath: /data
+      containers:
+      - image: nginx
+        name: con1
+        volumeMounts:
+        - name: myvol
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: myvol
+        emptyDir: {}
