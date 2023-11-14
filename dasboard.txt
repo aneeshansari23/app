@@ -1,0 +1,42 @@
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+
+kubectl get all -n kubernetes-dashboard
+
+
+
+######################  change service type CLUSTER-IP to NodePort ###########################
+
+kubectl -n kubernetes-dashboard edit svc kubernetes-dashboard
+
+###########   Check NodePort's PORT and access dashboard
+root@server:~/RBAC# kubectl -n kubernetes-dashboard get svc
+
+Access from browser using port and node's IP. it will ask for Token
+
+create token for service account kubernetes-dashboard
+
+service account token
+
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+  name: kubernetes-dashboard-secret
+  namespace: kubernetes-dashboard
+  annotations:
+    kubernetes.io/service-account.name: kubernetes-dashboard
+type: kubernetes.io/service-account-token
+EOF
+
+Now cluster-rolebinding for service account kubernetes-dashboard
+
+kubectl create clusterrolebinding dashboard-admin -n kubernetes-dashboard  --clusterrole=cluster-admin  --serviceaccount=kubernetes-dashboard:kubernetes-dashboard
+
+kubectl describe secrets kubernetes-dashboard-secret -n kubernetes-dashboard
+
+copy token and paste in on Token section 
+
+
+
+
+

@@ -1,0 +1,992 @@
+ 1017  kubectl delete -f net-egress.yaml 
+ 1018  vi net-egress.yaml 
+ 1019  kubectl create -f net-egress.yaml 
+ 1020  kubectl delete -f net-egress.yaml 
+ 1021  vi net-egress.yaml 
+ 1022  kubectl create -f net-egress.yaml 
+ 1023  kubectl get networkpolicies.networking.k8s.io 
+ 1024  kubectl delete  networkpolicies.networking.k8s.io denyall 
+ 1025  kubectl create -f net-deny.yaml 
+ 1026  vi emptydir-vol.yaml 
+ 1027  vi net-egress.yaml 
+ 1028  kubectl create -f net-egress.yaml 
+ 1029  kubectl apply -f net-egress.yaml 
+ 1030  vi net-egress.yaml 
+ 1031  kubectl apply -f net-egress.yaml 
+ 1032  vi net-egress.yaml 
+ 1033  vi net-policy.yaml 
+ 1034  vi net-egress.yaml 
+ 1035  vi net-policy.yaml 
+ 1036  kubectl apply -f net-policy.yaml 
+ 1037  kubectl delete -f net-policy.yaml 
+ 1038  vi dns-allow.yaml
+ 1039  kubectl create -f dns-allow.yaml
+ 1040  kubectl delete -f net-egress.yaml 
+ 1041  kubectl get networkpolicies.networking.k8s.io
+ 1042  vi net-policy.yaml 
+ 1043  kubectl apply -f net-policy.yaml 
+ 1044  vi net-policy.yaml 
+ 1045  kubectl apply -f net-policy.yaml 
+ 1046  vi net-policy.yaml 
+ 1047  kubectl apply -f net-policy.yaml 
+ 1048  vi net-policy.yaml 
+ 1049  kubectl delete -f net-policy.yaml 
+ 1050  vi net-policy.yaml 
+ 1051  kubectl create -f net-policy.yaml 
+ 1052  mv net-policy.yaml net-ingress.yaml
+ 1053  vi net-egress.yaml 
+ 1054  kubectl get networkpolicies.networking.k8s.io 
+ 1055  vi net-egress.yaml 
+ 1056  kubectl create -f net-egress.yaml 
+ 1057  vi net-egress.yaml 
+ 1058  vi net-ing-eg.yaml
+ 1059  kubectl create -f net-ing-eg.yaml
+ 1060  kubectl get ing
+ 1061  kubectl get networkpolicies.networking.k8s.io 
+ 1062  kubectl delete  networkpolicies.networking.k8s.io network-policy-2 network-policy mysql-network-policy allow-egress-policy
+ 1063  kubectl get networkpolicies.networking.k8s.io 
+ 1064  kubectl create -f net-ing-eg.yaml
+ 1065  kubectl get networkpolicies.networking.k8s.io 
+ 1066  vi net-ingress.yaml 
+ 1067  kubectl get networkpolicies.networking.k8s.io 
+ 1068  kubectl delete networkpolicies.networking.k8s.io mysql-network-policy 
+ 1069  kubectl get networkpolicies.networking.k8s.io 
+ 1070  vi net-ingress.yaml 
+ 1071  kubectl create -f net-ingress.yaml 
+ 1072  kubectl delete -f net-deny.yaml 
+ 1073  kubectl delete -f dns.yaml 
+ 1074  kubectl delete -f dns-allow.yaml 
+ 1075  kubectl create -f dns-allow.yaml 
+ 1076  kubectl create -f net-deny.yaml 
+ 1077  vi net-ingress.yaml 
+ 1078  kubectl create -f net-egress.yaml 
+ 1079  kubectl get networkpolicies.networking.k8s.io 
+ 1080  kubectl delete -f .
+ 1081  kubectl get networkpolicies.networking.k8s.io 
+ 1082  kubectl delete  networkpolicies.networking.k8s.io ingress-policy 
+ 1083  kubectl create -f net-deny.yaml 
+ 1084  kubectl create -f dns-allow.yaml 
+ 1085  vi net-ingress.yaml 
+ 1086  rm net-ingress.yaml 
+ 1087  vi net-ing-eg.yaml 
+ 1088  kubectl get svc
+ 1089  kubectl delete svc init-dep 
+ 1090  kubectl get pods
+ 1091  kubectl create -f wordpress.yaml -f wordpress-2.yaml 
+ 1092  kubectl create -f mysql.yaml 
+ 1093  kubectl get pods
+ 1094  kubectl get svc
+ 1095  vi net-wordpress-ing.yaml
+ 1096  vi net-wordpress-ing.yaml 
+ 1097  kubectl create -f net-wordpress-ing.yaml 
+ 1098  vi net-wordpress-ing.yaml 
+ 1099  vi wordpress.yaml 
+ 1100  vi net-wordpress-ing.yaml 
+ 1101  kubectl apply -f net-wordpress-ing.yaml 
+ 1102  vi net-wordpress-ing.yaml 
+ 1103  kubectl get networkpolicies.networking.k8s.io 
+ 1104  kubectl describe networkpolicies.networking.k8s.io wordpress-ing 
+ 1105  kubectl apply -f net-wordpress-ing.yaml 
+ 1106  kubectl describe networkpolicies.networking.k8s.io wordpress-ing 
+ 1107  cp net-wordpress-ing.yaml net-wordpress-egress.yaml 
+ 1108  vi net-wordpress-egress.yaml 
+ 1109  kubectl create -f net-wordpress-egress.yaml 
+ 1110  kubectl get networkpolicies.networking.k8s.io 
+ 1111  kubectl describe networkpolicies.networking.k8s.io mysql-ing-egress 
+ 1112  kubectl delete -f net-wordpress-egress.yaml 
+ 1113  vi net-wordpress-egress.yaml 
+ 1114  kubectl delete -f net-wordpress-egress.yaml 
+ 1115  kubectl create -f net-wordpress-egress.yaml 
+ 1116  vi net-wordpress-egress.yaml 
+ 1117  kubectl delete -f net-wordpress-egress.yaml 
+ 1118  kubectl create -f net-wordpress-egress.yaml 
+ 1119  kubectl delete -f net-wordpress-egress.yaml 
+ 1120  vi net-wordpress-egress.yaml 
+ 1121  kubectl create -f net-wordpress-egress.yaml 
+ 1122  kubectl delete -f net-wordpress-egress.yaml 
+ 1123  vi net-wordpress-egress.yaml 
+ 1124  kubectl create -f net-wordpress-egress.yaml 
+ 1125  kubectl delete -f net-wordpress-egress.yaml 
+ 1126  vi net-wordpress-egress.yaml 
+ 1127  kubectl create -f net-wordpress-egress.yaml 
+ 1128  vi net-wordpress-egress.yaml 
+ 1129  kubectl delete -f net-wordpress-egress.yaml 
+ 1130  kubectl create -f net-wordpress-egress.yaml 
+ 1131  kubectl get networkpolicies.networking.k8s.io 
+ 1132  vi net-wordpress-egress.yaml 
+ 1133  cp net-wordpress-egress.yaml /tmp/
+ 1134  vi net-wordpress-egress.yaml
+ 1135  kubectl delete -f net-wordpress-egress.yaml 
+ 1136  kubectl create -f net-wordpress-egress.yaml 
+ 1137  kubectl get networkpolicies.networking.k8s.io 
+ 1138  kubectl describe networkpolicies.networking.k8s.io mysql-ing-egress
+ 1139  vi net-wordpress-egress.yaml
+ 1140  vi net-wordpress-ing.yaml 
+ 1141  vi net-deny.yaml 
+ 1142  vi dns-allow.yaml 
+ 1143  init 0
+ 1144  cd app2/
+ 1145  ls
+ 1146  kubectl get pods
+ 1147  kubectl delete pod wordpress mydb wordpress-2
+ 1148  kubectl get svc
+ 1149  kubectl delete svc mysql-svc wordpress-2-svc wordpress-svc 
+ 1150  kubectl get svc
+ 1151  vi nodename-pod.yaml 
+ 1152  vi nodeselc-pod.yaml 
+ 1153  cp nodeselc-pod.yaml affi-pref.yaml
+ 1154  ls
+ 1155  vi affi-pref.yaml 
+ 1156  kubectl create -f affi-pref.yaml 
+ 1157  vi affi-pref.yaml 
+ 1158  kubectl create -f affi-pref.yaml 
+ 1159  kubectl get pods -o wide
+ 1160  kubectl get nodes --show-labels | grep "cpu=ryzen"
+ 1161  kubectl label nodes node1 cpu-
+ 1162  kubectl delete -f affi-pref.yaml 
+ 1163  kubectl ge pods
+ 1164  kubectl get pods
+ 1165  kubectl create -f affi-pref.yaml 
+ 1166  kubectl get pods
+ 1167  kubectl get pods -o wide
+ 1168  kubectl label nodes node1 cpu=ryzen
+ 1169  kubectl delete -f affi-pref.yaml 
+ 1170  vi affi-pref.yaml l
+ 1171  kubectl create -f affi-pref.yaml 
+ 1172  kubectl get pods -o wide
+ 1173  kubectl delete -f affi-pref.yaml 
+ 1174  kubectl get pods -o wide
+ 1175  cp affi-pref.yaml aff-req.yaml
+ 1176  vi aff-req.yaml 
+ 1177  kubectl get nodes --show-labels | grep "cpu=ryzen"
+ 1178  kubectl label nodes node1 cpu-
+ 1179  kubectl get nodes --show-labels | grep "cpu=ryzen"
+ 1180  kubectl create -f aff-req.yaml 
+ 1181  kubectl get pod -o wide
+ 1182  kubectl describe pod req-pod 
+ 1183  kubectl get pod -o wide
+ 1184  kubectl label nodes node1 cpu=ryzen
+ 1185  kubectl get pod -o wide
+ 1186  kubectl delete -f aff-req.yaml 
+ 1187  vi aff-req.yaml 
+ 1188  kubectl create -f aff-req.yaml 
+ 1189  kubectl get pod -o wide
+ 1190  vi pod.yaml 
+ 1191  kubectl create -f pod.yaml 
+ 1192  kubectl get pod -o wide
+ 1193  kubectl delete po req-pod 
+ 1194  kubectl get pod -o wide
+ 1195  cp aff-req.yaml aff-pod-pref.yaml
+ 1196  vi  aff-pod-pref.yaml
+ 1197  kubectl get pod --show-labels 
+ 1198  vi  aff-pod-pref.yaml
+ 1199  kubectl get nodes --show-labels 
+ 1200  vi  aff-pod-pref.yaml
+ 1201  kubectl create -f  aff-pod-pref.yaml
+ 1202  vi  aff-pod-pref.yaml
+ 1203  kubectl get nodes --show-labels 
+ 1204  vi  aff-pod-pref.yaml
+ 1205  kubectl get pods
+ 1206  kubectl get pods -o wide
+ 1207  kubectl delete -f  aff-pod-pref.yaml
+ 1208  vi  aff-pod-pref.yaml
+ 1209  kubectl create -f  aff-pod-pref.yaml
+ 1210  kubectl get pods -o wide
+ 1211  vi  aff-pod-pref.yaml
+ 1212  kubectl delete pod req-pod 
+ 1213  vi aff-pod-pref.yaml 
+ 1214  kubectl delete po mypod 
+ 1215  kubectl get pod
+ 1216  kubectl create -f  aff-pod-pref.yaml
+ 1217  kubectl get pod -o wide
+ 1218  kubectl delete -f  aff-pod-pref.yaml
+ 1219  cp aff-pod-pref.yaml aff-pod-req.yaml
+ 1220  vi aff-pod-req.yaml
+ 1221  kubectl get pods
+ 1222  vi aff-pod-req.yaml
+ 1223  kubectl create -f aff-pod-req.yaml
+ 1224  kubectl get pods -o wide
+ 1225  vi pod.yaml 
+ 1226  kubectl create -f pod.yaml 
+ 1227  kubectl get pod -o wide
+ 1228  kubectl delete -f aff-pod-req.yaml
+ 1229  vi aff-pod-req.yaml
+ 1230  kubectl create -f aff-pod-req.yaml
+ 1231  kubectl get pod -o wide
+ 1232  init 0
+ 1233  kubectl get pods
+ 1234  kubectl delete pod mypod req-pod
+ 1235  kubectl get pods
+ 1236  cd app
+ 1237  ls
+ 1238  kubectl get pod
+ 1239  kubectl get svc
+ 1240  kubectl delete svc mypod 
+ 1241  kubectl get networkpolicies.networking.k8s.io 
+ 1242  vi net-deny.yaml 
+ 1243  vi dns-allow.yaml 
+ 1244  vi net-wordpress-ing.yaml 
+ 1245  vi dns-allow.yaml 
+ 1246  vi net-wordpress-ing.yaml 
+ 1247  vi net-egress.yaml 
+ 1248  vi net-ing-eg.yaml 
+ 1249  ls
+ 1250  vi net-wordpress-egress.yaml
+ 1251  mv net-wordpress-egress.yaml net-mysql-ing-eg.yaml
+ 1252  vi net-mysql-ing-eg.yaml
+ 1253  kubectl delete -f net-wordpress-ing.yaml 
+ 1254  kubectl delete -f net-mysql-ing-eg.yaml 
+ 1255  kubectl get networkpolicies.networking.k8s.io 
+ 1256  kubectl create -f wordpress.yaml 
+ 1257  kubectl create -f mysql.yaml 
+ 1258  kubectl get pods
+ 1259  kubectl get svc
+ 1260  vi dns-allow.yaml 
+ 1261  vi net-wordpress-ing.yaml 
+ 1262  kubectl create -f net-wordpress-ing.yaml 
+ 1263  kubectl create -f net-mysql-ing-eg.yaml 
+ 1264  kubectl get networkpolicies.networking.k8s.io 
+ 1265  vi net-mysql-ing-eg.yaml 
+ 1266  vi wordpress.yaml 
+ 1267  kubectl get pods
+ 1268  kubectl exec -it wordpress -- bash
+ 1269  kubectl get networkpolicies.networking.k8s.io 
+ 1270  kubectl delete -f net-deny.yaml 
+ 1271  kubectl exec -it wordpress -- bash
+ 1272  exit
+ 1273  kubectl get networkpolicies.networking.k8s.io 
+ 1274  kubectl delete networkpolicies.networking.k8s.io allow-dns 
+ 1275  kubectl exec -it wordpress -- bash
+ 1276  kubectl run test --image nginx 
+ 1277  kubectl exec -it test -- bash
+ 1278  kubectl get svc
+ 1279  kubectl exec -it test -- bash
+ 1280  kubectl get networkpolicies.networking.k8s.io 
+ 1281  cd app
+ 1282  kubectl create -f net-deny.yaml 
+ 1283  kubectl delete -f mysql.yaml -f wordpress
+ 1284  kubectl delete -f mysql.yaml -f wordpress.yaml 
+ 1285  kubectl get networkpolicies.networking.k8s.io 
+ 1286  kubectl delete -f net-mysql-ing-eg.yaml 
+ 1287  kubectl get networkpolicies.networking.k8s.io 
+ 1288  vi net-mysql-ing-eg.yaml 
+ 1289  kubectl create -f net-mysql-ing-eg.yaml 
+ 1290  kubectl get networkpolicies.networking.k8s.io 
+ 1291  vi net-mysql-ing-eg.yaml 
+ 1292  kubectl apply -f net-mysql-ing-eg.yaml 
+ 1293  kubectl get svc
+ 1294  kubectl get pod
+ 1295  vi net-mysql-ing-eg.yaml 
+ 1296  kubectl apply -f net-mysql-ing-eg.yaml 
+ 1297  kubectl get networkpolicies.networking.k8s.io 
+ 1298  kubectl describe networkpolicies.networking.k8s.io wordpress-ing
+ 1299  kubectl describe networkpolicies.networking.k8s.io mysql-ing-egress
+ 1300  kubectl create -f wordpress.yaml -f mysql.yaml 
+ 1301  kubectl get pods,svc
+ 1302  vi net-mysql-ing-eg.yaml 
+ 1303  kubectl create -f net-mysql-ing-eg.yaml 
+ 1304  kubectl apply -f net-mysql-ing-eg.yaml 
+ 1305  kubectl describe networkpolicies.networking.k8s.io mysql-ing-egress
+ 1306  kubectl get networkpolicies.networking.k8s.io 
+ 1307  kubectl create -f dns-allow.yaml 
+ 1308  kubectl get networkpolicies.networking.k8s.io 
+ 1309  vi net-mysql-ing-eg.yaml 
+ 1310  vi dns-allow.yaml 
+ 1311  kubectl get pods
+ 1312  kubectl exec -it test -- bash
+ 1313  vi net-wordpress-ing.yaml 
+ 1314  vi wordpress.yaml 
+ 1315  kubectl get svc
+ 1316  kubectl get pod -n kube-system 
+ 1317  kubectl get networkpolicies.networking.k8s.io 
+ 1318  kubectl delete -f net-mysql-ing-eg.yaml 
+ 1319  vi net-mysql-ing-eg.yaml 
+ 1320  kubectl apply -f net-mysql-ing-eg.yaml 
+ 1321  kubectl describe networkpolicies.networking.k8s.io mysql-ing-egress
+ 1322  vi net-mysql-ing-eg.yaml 
+ 1323  vi dns-allow.yaml 
+ 1324  kubectl delete -f dns-allow.yaml 
+ 1325  kubectl get networkpolicies.networking.k8s.io 
+ 1326  vi net-mysql-ing-eg.yaml 
+ 1327  kubectl create -f net-mysql-ing-eg.yaml 
+ 1328  kubectl apply -f net-mysql-ing-eg.yaml 
+ 1329  kubectl get networkpolicies.networking.k8s.io 
+ 1330  kubectl describe networkpolicies.networking.k8s.io mysql-ing-egress 
+ 1331  vi wordpress.yaml 
+ 1332  kubectl delete -f wordpress.yaml 
+ 1333  vi wordpress.yaml 
+ 1334  kubectl get svc
+ 1335  vi wordpress.yaml 
+ 1336  kubectl create -f wordpress.yaml 
+ 1337  kubectl get pods
+ 1338  vi wordpress.yaml 
+ 1339  kubectl get svc
+ 1340  vi wordpress.yaml 
+ 1341  kubectl delete -f wordpress.yaml 
+ 1342  vi net-mysql-ing-eg.yaml 
+ 1343  vi dns-allow.yaml 
+ 1344  vi net-mysql-ing-eg.yaml 
+ 1345  vi net-wordpress-ing.yaml 
+ 1346  kubectl apply -f net-wordpress-ing.yaml
+ 1347  vi net-mysql-ing-eg.yaml 
+ 1348  kubectl get pods
+ 1349  kubectl get networkpolicies.networking.k8s.io 
+ 1350  kubectl create -f wordpress.yaml 
+ 1351  kubectl delete -f wordpress.yaml 
+ 1352  kubectl get svc
+ 1353  vi wordpress.yaml 
+ 1354  kubectl create -f wordpress.yaml 
+ 1355  kubectl get pods
+ 1356  vi net-mysql-ing-eg.yaml 
+ 1357  kubectl delete -f net-mysql-ing-eg.yaml 
+ 1358  kubectl delete -f net-wordpress-ing.yaml 
+ 1359  kubectl get networkpolicies.networking.k8s.io 
+ 1360  vi net-wordpress-ing.yaml 
+ 1361  kubectl create -f net-wordpress-ing.yaml 
+ 1362  vi wordpress.yaml 
+ 1363  vi net-mysql-ing-eg.yaml 
+ 1364  kubectl create -f net-mysql-ing-eg.yaml 
+ 1365  kubectl create -f wordpress.yaml 
+ 1366  kubectl delete -f wordpress.yaml 
+ 1367  vi wordpress.yaml 
+ 1368  kubectl create -f wordpress.yaml 
+ 1369  kubectl get pods
+ 1370  vi net-wordpress-ing.yaml 
+ 1371  kubectl apply -f net-wordpress-ing.yaml 
+ 1372  vi net-wordpress-ing.yaml 
+ 1373  kubectl apply -f net-wordpress-ing.yaml 
+ 1374  vi net-mysql-ing-eg.yaml 
+ 1375  kubectl create -f net-mysql-ing-eg.yaml 
+ 1376  kubectl apply -f net-mysql-ing-eg.yaml 
+ 1377  vi net-deny.yaml 
+ 1378  vi dns-allow.yaml 
+ 1379  vi net-deny.yaml 
+ 1380  kubectl apply -f net-deny.yaml 
+ 1381  kubectl get networkpolicies.networking.k8s.io 
+ 1382  vi net-deny.yaml 
+ 1383  init 0
+ 1384  cd app2/
+ 1385  ls
+ 1386  kubectl get pods
+ 1387  kubectl delete po mydb test wordpress 
+ 1388  kubectl get pods
+ 1389  kubectl get nodes
+ 1390  kubectl describe nodes node1 
+ 1391  kubectl describe nodes node1 | grep "Taint"
+ 1392  kubectl describe nodes node2 | grep "Taint"
+ 1393  kubectl describe nodes server | grep "Taint"
+ 1394  kubectl describe nodes server | grep -A 2 "Taint"
+ 1395  kubectl describe nodes server | grep  "Taint"
+ 1396  kubectl describe nodes node1 | grep "Taint"
+ 1397  #kubectl taint node node1 color=red:
+ 1398  kubectl create deployment mydep --image nginx --replicas 3
+ 1399  kubectl get pods -o wide
+ 1400  vi nodename-pod.yaml 
+ 1401  kubectl create -f nodename-pod.yaml 
+ 1402  kubectl get pods -o wide
+ 1403  kubectl taint node node1 color=red:NoExecute
+ 1404  kubectl describe nodes node1 | grep "Taint"
+ 1405  kubectl get pods -o wide
+ 1406  cp nodename-pod.yaml taint-tol.yaml
+ 1407  kubectl get pod
+ 1408  kubectl get pod -o wide
+ 1409  kubectl get pod -n kube-system 
+ 1410  kubectl get pod -n kube-system -o wide
+ 1411  kubectl get pod -n kube-system 
+ 1412  vi taint-tol.yaml 
+ 1413  kubectl create -f taint-tol.yaml 
+ 1414  kubectl get pod -o wide
+ 1415  kubectl create deployment mydep2 --image nginx --replicas 3
+ 1416  kubectl get pod -o wide
+ 1417  kubectl delete deployments.apps mydep mydep2 
+ 1418  kubectl get pod -o wide
+ 1419  kubectl taint node node1 color-
+ 1420  kubectl describe nodes node1 | grep "Taint"
+ 1421  kubectl describe nodes server | grep "Taint"
+ 1422  cp taint-tol.yaml taint-tol-master.yaml 
+ 1423  vi taint-tol-master.yaml 
+ 1424  kubectl create -f taint-tol-master.yaml 
+ 1425  kubectl get pod -o wide
+ 1426  kubectl get nodes
+ 1427  kubectl delete -f taint-tol-master.yaml 
+ 1428  kubectl cordon node1 
+ 1429  kubectl cordon node2
+ 1430  kubectl get nodes
+ 1431  kubectl create -f taint-tol-master.yaml 
+ 1432  kubectl get pod -o wide
+ 1433  kubectl uncordon node1 
+ 1434  kubectl uncordon node2
+ 1435  kubectl get nodes
+ 1436  kubectl delete -f taint-tol-master.yaml 
+ 1437  vi rc.yaml
+ 1438  kubectl get pods
+ 1439  kubectl get pods --show-labels 
+ 1440  kubectl delete pod tol-pod 
+ 1441  vi pod.yaml 
+ 1442  kubectl create -f pod.yaml 
+ 1443  kubectl get pods --show-labels 
+ 1444  vi rc.yaml
+ 1445  kubectl create -f rc.yaml 
+ 1446  vi rc.yaml
+ 1447  kubectl create -f rc.yaml 
+ 1448  kubectl get replicationcontrollers 
+ 1449  kubectl get rc
+ 1450  kubectl get pods -o wide
+ 1451  vi rc.yaml 
+ 1452  kubectl get pods --show-labels 
+ 1453  kubectl delete -f rc.yaml 
+ 1454  kubectl get pods 
+ 1455  vi rc.yaml 
+ 1456  kubectl create -f rc.yaml 
+ 1457  kubectl get rc
+ 1458  kubectl get pods
+ 1459  kubectl scale replicationcontroller myrc --replicas 8
+ 1460  kubectl get pods
+ 1461  kubectl get pods -o wide
+ 1462  kubectl scale replicationcontroller myrc --replicas 2
+ 1463  kubectl get pods -o wide
+ 1464  kubectl delete -f rc.yaml 
+ 1465  vi rc.yaml 
+ 1466  cp rc.yaml rs.yaml
+ 1467  vi rs.yaml 
+ 1468  vi pod.yaml 
+ 1469  kubectl create -f pod.yaml 
+ 1470  kubectl get pods -o wide
+ 1471  kubectl get pods --show-labels 
+ 1472  vi rs.yaml 
+ 1473  kubectl create -f rs.yaml 
+ 1474  vi rs.yaml 
+ 1475  kubectl create -f rs.yaml 
+ 1476  kubectl get rs
+ 1477  kubectl get pod -o wide
+ 1478  kubectl scale replicaset myrs --replicas 5
+ 1479  kubectl get pod -o wide
+ 1480  kubectl scale replicaset myrs --replicas 2
+ 1481  kubectl get pod -o wide
+ 1482  kubectl expose replicaset myrs --type NodePort --port 80
+ 1483  vi rs.yaml 
+ 1484  kubectl expose replicaset myrs --type NodePort --port 80 --dry-run=client -o yaml
+ 1485  vi pod.yaml 
+ 1486  vi rs-svc.yaml
+ 1487  kubectl get pod
+ 1488  kubectl delete pod mypod 
+ 1489  kubectl create -f rs-svc.yaml 
+ 1490  kubectl get svc
+ 1491  kubectl delete svc mysql-svc wordpress-svc 
+ 1492  kubectl create -f rs-svc.yaml 
+ 1493  kubectl get svc
+ 1494  kubectl describe svc myrs-svc 
+ 1495  kubectl get pod -o wide
+ 1496  kubectl get svc
+ 1497  kubectl get pod -o wide
+ 1498  kubectl describe pod myrs-fslpz
+ 1499  kubectl get pod -o wide
+ 1500  curl http://10.0.1.39
+ 1501  kubectl delete pod myrs-fslpz
+ 1502  kubectl get pod -o wide
+ 1503  kubectl get pod
+ 1504  kubectl delete replicasets.apps myrs 
+ 1505  kubectl get svc
+ 1506  kubectl delete svc myrs-svc 
+ 1507  cp rc.yaml deployment.yaml
+ 1508  vi deployment.yaml 
+ 1509  kubectl create -f deployment.yaml 
+ 1510  kubectl get deployments.apps 
+ 1511  kubectl get pods
+ 1512  kubectl get rs
+ 1513  kubectl get deploy
+ 1514  kubectl get pods --show-labels 
+ 1515  kubectl expose deployment mydep --type NodePort --port 80 
+ 1516  kubectl get svc
+ 1517  kubectl delete networkpolicies.networking.k8s.io denyall mysql-ing-egress wordpress-ing 
+ 1518  kubectl get deployments.apps -o wide
+ 1519  kubectl rollout deployment history mydep
+ 1520  kubectl rollout history deployment mydep 
+ 1521  kubectl annotate deployments.apps mydep kubernetes.io/change-casue="fresh deployment of nginx"
+ 1522  kubectl rollout history deployment mydep 
+ 1523  kubectl annotate deployments.apps mydep kubernetes.io/change-cause="fresh deployment of nginx"
+ 1524  kubectl rollout history deployment mydep 
+ 1525  kubectl set image deployment mydep con1=httpd:latest
+ 1526  kubectl rollout history deployment mydep 
+ 1527  kubectl annotate deployments.apps mydep kubernetes.io/change-cause="httpd image update"
+ 1528  kubectl rollout history deployment mydep 
+ 1529  kubectl get deployments.apps -o wide
+ 1530  kubectl get pods
+ 1531  kubectl describe pod mydep-7798554797-d2sbt
+ 1532  kubectl describe deployments.apps mydep 
+ 1533  kubectl rollout history deployment mydep 
+ 1534  kubectl rollout history deployment mydep --revision 1
+ 1535  kubectl rollout history deployment mydep --revision 2
+ 1536  kubectl rollout history deployment mydep 
+ 1537  kubectl get rs
+ 1538  kubectl get pods
+ 1539  kubectl rollout undo deployment mydep --to-revision 1
+ 1540  kubectl get pods
+ 1541  kubectl get rs
+ 1542  kubectl get pod
+ 1543  kubectl get deployments.apps 
+ 1544  kubectl get pod
+ 1545  kubectl scale deployment mydep --replicas 5
+ 1546  kubectl get deployments.apps 
+ 1547  kubectl get pod
+ 1548  kubectl scale deployment mydep --replicas 2
+ 1549  kubectl get pod
+ 1550  kubectl get pod -n kube-system 
+ 1551  kubectl autoscale deployment mydep --min 3 --max 10 --cpu-percent 80 --dry-run=client -o yaml
+ 1552  vi deployment.yaml 
+ 1553  kubectl autoscale deployment mydep --min 3 --max 10 --cpu-percent 80 
+ 1554  kubectl get hpa
+ 1555  init 0
+ 1556  kubectl get pods
+ 1557  kubectl delete deployments.apps mydep 
+ 1558  cd app
+ 1559  ls
+ 1560  vi deploy.yaml 
+ 1561  cp deploy.yaml ingress-deployment.yaml
+ 1562  vi ingress-deployment.yaml 
+ 1563  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/baremetal/deploy.yaml
+ 1564  kubectl get ns
+ 1565  kubectl get pod -n ingress-nginx
+ 1566  vi ingress-deployment.yaml 
+ 1567  kubectl get svc -n ingress-nginx 
+ 1568  vi ingress-deployment.yaml 
+ 1569  kubectl create -f ingress-deployment.yaml 
+ 1570  vi ingress-deployment.yaml 
+ 1571  kubectl apply -f ingress-deployment.yaml 
+ 1572  kubectl get deployments.apps 
+ 1573  kubectl get pods
+ 1574  kubectl get svc
+ 1575  kubectl delete -f ingress-deployment.yaml 
+ 1576  kubectl apply -f ingress-deployment.yaml 
+ 1577  kubectl get pods
+ 1578  kubectl get svc
+ 1579  kubectl delete svc 
+ 1580  kubectl get svc
+ 1581  kubectl get ingress
+ 1582  kubectl get svc -n ingress-nginx 
+ 1583  kubectl -n ingress-nginx edit svc ingress-nginx-controller
+ 1584  vi ingress-deployment.yaml 
+ 1585  kubectl apply -f ingress-deployment.yaml 
+ 1586  vi ingress-deployment.yaml 
+ 1587  kubectl apply -f ingress-deployment.yaml 
+ 1588  vi ingress-deployment.yaml 
+ 1589  kubectl get svc -n ingress-nginx 
+ 1590  vi ingress-deployment.yaml 
+ 1591  kubectl get ing
+ 1592  curl http://http://aneesh.com:32073/
+ 1593  curl http://aneesh.com:32073/
+ 1594  kubectl get ing
+ 1595  kubectl get svc -n ingress-nginx 
+ 1596  kubectl get deployments.apps 
+ 1597  kubectl get pods -o wide
+ 1598  kubectl get svc
+ 1599  kubectl describe svc mydep-svc 
+ 1600  kubectl get ing
+ 1601  kubectl describe ingress minimal-ingress 
+ 1602  kubectl delete -f ingress-deployment.yaml 
+ 1603  kubectl create -f ingress-deployment.yaml 
+ 1604  kubectl get svc,ing, pods
+ 1605  kubectl get svc,ing,pods
+ 1606  kubectl get ing
+ 1607  vi ingress-deployment.yaml 
+ 1608  kubectl apply -f ingress-deployment.yaml 
+ 1609  kubectl get ing
+ 1610  vi ingress-deployment.yaml 
+ 1611  kubectl get ing -n ingress-nginx 
+ 1612  kubectl get isvc -n ingress-nginx 
+ 1613  kubectl get svc -n ingress-nginx 
+ 1614  vi ingress-deployment.yaml 
+ 1615  kubectl apply -f ingress-deployment.yaml 
+ 1616  kubectl get ing
+ 1617  init 0
+ 1618  kubectl get ns
+ 1619  kubectl create namespace devops --dry-run=client -o yaml
+ 1620  kubectl create namespace devops 
+ 1621  kubectl get ns
+ 1622  kubectl describe ns devops 
+ 1623  cd app
+ 1624  ls
+ 1625  vi pod.yaml 
+ 1626  kubectl create -f pod.yaml -n devops 
+ 1627  kubectl get pod -n devops
+ 1628  kubectl -n devops describe pod mypod 
+ 1629  kubectl get pod -n devops
+ 1630  kubectl describe ns devops 
+ 1631  vi limit-range.yaml
+ 1632  kubectl create -f limit-range.yaml
+ 1633  kubectl describe ns devops 
+ 1634  kubectl -n devops describe pod mypod 
+ 1635  kubectl delete -f pod.yaml -n devops 
+ 1636  kubectl create -f pod.yaml -n devops 
+ 1637  kubectl -n devops describe pod mypod 
+ 1638  kubectl delete -f pod.yaml -n devops 
+ 1639  vi pod.yaml 
+ 1640  kubectl create -f pod.yaml -n devops 
+ 1641  kubectl -n devops describe pod mypod 
+ 1642  kubectl describe ns devops 
+ 1643  vi resource-quota.yaml
+ 1644  kubectl create -f resource-quota.yaml 
+ 1645  vi resource-quota.yaml
+ 1646  kubectl create -f resource-quota.yaml 
+ 1647  kubectl get resourcequotas -n devops 
+ 1648  kubectl describe ns devops 
+ 1649  vi resource-quota.yaml 
+ 1650  kubectl -n devops get cm
+ 1651  kubectl -n devops get limitranges 
+ 1652  kubectl -n devops edit limitranges limitrange-devops 
+ 1653  kubectl -n devops edit resourcequotas resource-quota-devops 
+ 1654  kubectl get sa
+ 1655  kubectl get sa -n devops 
+ 1656  kubectl describe sa default 
+ 1657  kubectl describe sa default -n devops 
+ 1658  vi ~/.kube/config 
+ 1659  kubectl get pod
+ 1660  kubectl describe pod mydep-8496f99cc6-kvrvv 
+ 1661  kubectl create serviceaccount robo
+ 1662  cp pod.yaml sa-pod.yaml
+ 1663  vi sa-pod.yaml 
+ 1664  kubectl create -f sa-pod.yaml 
+ 1665  kubectl get pods
+ 1666  kubectl delete deployments.apps mydep 
+ 1667  kubectl get pods
+ 1668  kubectl describe pod mypod 
+ 1669  kubectl exec -it mypod -- bash
+ 1670  kubectl delete -f sa-pod.yaml 
+ 1671  cd app
+ 1672  kubectl delete -f sa-pod.yaml 
+ 1673  vi sa-pod.yaml 
+ 1674  kubectl create -f sa-pod.yaml 
+ 1675  kubectl exec -it mypod -- bahs
+ 1676  kubectl exec -it mypod -- bash
+ 1677  kubectl create role robo-role --verb create,delete,update,list,get --
+ 1678  kubectl create role robo-role --verb=create,delete,update,list,get --resource=pods,deployment,configmaps,secrets --dry-run=client -o yaml
+ 1679  kubectl create role robo-role --verb=create,delete,update,list,get --resource=pods,deployment,configmaps,secrets 
+ 1680  kubectl get role 
+ 1681  kubectl create role robo-role --verb=create,delete,update,list,get --resource=pods,deployment,configmaps,secrets -n devops
+ 1682  kubectl get role -n devops 
+ 1683  #kubectl -n devops create rolebinding robo-rb --role robo-role --serviceaccount robo 
+ 1684  kubectl get sa
+ 1685  kubectl create sa robo -n devops 
+ 1686  kubectl delete sa robo 
+ 1687  kubectl -n devops get sa 
+ 1688  kubectl -n devops create rolebinding robo-rb --role robo-role --serviceaccount robo 
+ 1689  kubectl -n devops create rolebinding robo-rb --role robo-role --serviceaccount devops:robo 
+ 1690  kubectl -n devops get rolebindings.rbac.authorization.k8s.io 
+ 1691  kubectl delete pod mypod -n devops 
+ 1692  vi sa-pod.yaml 
+ 1693  kubectl create -f sa-pod.yaml 
+ 1694  kubectl -n devops get pods
+ 1695  kubectl exec -it mypod -- bash
+ 1696  kubectl -n devops exec -it mypod -- bash
+ 1697  cd /home/aneesh/.certs/
+ 1698  ls
+ 1699  rm aneesh.crt 
+ 1700  openssl x509 -req -in aneesh.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out aneesh.crt -days 500
+ 1701  ls
+ 1702  ls -l
+ 1703  chown aneesh:aneesh aneesh.crt 
+ 1704  l
+ 1705  ll
+ 1706  vi ~/.kube/config 
+ 1707  kubectl get role -n devops 
+ 1708  kubectl get rolebindings.rbac.authorization.k8s.io -n devops 
+ 1709  kubectl create rolebinding robo-aneesh --user aneesh
+ 1710  kubectl create rolebinding robo-aneesh --role robo-role --user aneesh
+ 1711  kubectl get rolebindings.rbac.authorization.k8s.io -n devops 
+ 1712  kubectl delete rolebindings.rbac.authorization.k8s.io robo-aneesh 
+ 1713  kubectl -n devops create rolebinding robo-aneesh --role robo-role --user aneesh
+ 1714  kubectl get rolebindings.rbac.authorization.k8s.io -n devops 
+ 1715  cd
+ 1716  adduser prasanna
+ 1717  kubectl get clusterrole
+ 1718  kubectl create clusterrole robo-cluster --verb create,get,list,delete --resource pod,deployment,configmap,secrets
+ 1719  kubectl create clusterrolebinding robo-cluster-aneesh --clusterrole robo-cluster --user aneesh
+ 1720  cd app
+ 1721  history > rbac-cmd.txt
+ 1722  vi rbac-cmd.txt 
+ 1723  git add .
+ 1724  git commit -m "RBAC"
+ 1725  git push origin main
+ 1726  git remote show 
+ 1727  vi RBAC-steps.txt
+ 1728  git add .
+ 1729  git commit -m "RBAC steps"
+ 1730  git push origin 
+ 1731  int 0
+ 1732  init 0
+ 1733  cd app2/
+ 1734  ls
+ 1735  cp pod.yaml pod-live-exec.yaml
+ 1736  vi pod-live-exec.yaml
+ 1737  kubectl get pods
+ 1738  kubectl delete pod mypod 
+ 1739  kubectl get svc
+ 1740  kubectl delete svc mydep-svc 
+ 1741  kubectl get svc
+ 1742  kubectl get pods
+ 1743  vi pod-live-exec.yaml
+ 1744  kubectl create -f pod-live-exec.yaml
+ 1745  kubectl get pods
+ 1746  kubectl describe pod mypod 
+ 1747  kubectl get pods
+ 1748  kubectl describe pod mypod 
+ 1749  kubectl get pods
+ 1750  kubectl get pods -o wide
+ 1751  kubectl describe service mypod 
+ 1752  kubectl get pods
+ 1753  kubectl delete -f pod-live-exec.yaml
+ 1754  kubectl create -f pod-live-exec.yaml
+ 1755  kubectl describe service mypod 
+ 1756  kubectl get pods -o wide
+ 1757  kubectl describe service mypod 
+ 1758  kubectl get pods -o wide
+ 1759  kubectl describe service mypod 
+ 1760  kubectl get pods -o wide
+ 1761  kubectl delete -f pod-live-exec.yaml
+ 1762  vi pod-live-exec.yaml
+ 1763  cp pod-live-exec.yaml pod-live-http.yaml
+ 1764  vi pod-live-http.yaml
+ 1765  kubectl create -f pod-live-http.yaml
+ 1766  vi pod-live-http.yaml
+ 1767  kubectl create -f pod-live-http.yaml
+ 1768  kubectl get pods -o wide
+ 1769  kubectl describe svc mypod 
+ 1770  kubectl describe pod liv-exec 
+ 1771  kubectl delete -f pod-live-http.yaml
+ 1772  cp pod-live-http.yaml pod-live-tcp.yaml
+ 1773  vi pod-live-tcp.yaml
+ 1774  kubectl create -f pod-live-tcp.yaml
+ 1775  kubectl get pods
+ 1776  kubectl describe pod liv-tcp 
+ 1777  kubectl get pods
+ 1778  ls
+ 1779  vi deployment.yaml 
+ 1780  history 
+ 1781  ls
+ 1782  vi pod-live-exec.yaml 
+ 1783  cp pod-live-exec.yaml pod-live-readi.yaml
+ 1784  vi pod-live-readi.yaml
+ 1785  kubectl create -f pod-live-readi.yaml
+ 1786  kubectl delete -f pod-live-readi.yaml
+ 1787  kubectl create -f pod-live-readi.yaml
+ 1788  kubectl get pods
+ 1789  kubectl describe svc mypod 
+ 1790  kubectl delete pod liv-tcp 
+ 1791  kubectl describe svc mypod 
+ 1792  kubectl get pods -o wide
+ 1793  kubectl describe pod readi-exec 
+ 1794  kubectl get pods -o wide
+ 1795  kubectl delete -f pod-live-readi.yaml
+ 1796  mv pod-live-readi.yaml pod-readi-exec.yaml
+ 1797  vi pod-readi-exec.yaml
+ 1798  kubectl create -f pod-readi-exec.yaml
+ 1799  kubectl get pods
+ 1800  kubectl describe pod readi-exec 
+ 1801  kubectl get pods
+ 1802  kubectl describe pod readi-exec 
+ 1803  kubectl describe svc mypod 
+ 1804  vi deployment.yaml 
+ 1805  vi pod-readi-exec.yaml
+ 1806  vi pod-live-http.yaml 
+ 1807  kubectl describe pod readi-exec 
+ 1808  cp deployment.yaml daemonset.yaml
+ 1809  vi daemonset.yaml 
+ 1810  kubectl create -f daemonset.yaml 
+ 1811  kubectl get pod
+ 1812  kubectl get pod -o wide
+ 1813  kubectl get svc
+ 1814  kubectl get nodes
+ 1815  ls
+ 1816  vi taint-tol-master.yaml
+ 1817  vi daemonset.yaml 
+ 1818  kubectl delete -f daemonset.yaml 
+ 1819  kubectl create -f daemonset.yaml 
+ 1820  kubectl delete -f daemonset.yaml 
+ 1821  vi daemonset.yaml 
+ 1822  kubectl delete -f daemonset.yaml 
+ 1823  kubectl create -f daemonset.yaml 
+ 1824  kubectl get pod -o wide
+ 1825  kubectl delete -f daemonset.yaml 
+ 1826  cp deployment.yaml emptydir.yaml
+ 1827  vi emptydir.yaml 
+ 1828  kubectl create -f emptydir.yaml 
+ 1829  kubectl get pods -o wide
+ 1830  kubectl describe po mydep-8b84bd47c-dp54t 
+ 1831  kubectl get pods -o wide
+ 1832  kubectl exec -it mydep-8b84bd47c-dp54t -c con1 -- bash
+ 1833  kubectl exec -it mydep-8b84bd47c-dp54t -c con2 -- bash
+ 1834  kubectl exec -it mydep-8b84bd47c-fjx62 -c con1 -- bash
+ 1835  kubectl delete -f deployment.yaml 
+ 1836  kubectl get pods
+ 1837  cp emptydir.yaml hostpath.yaml
+ 1838  vi hostpath.yaml
+ 1839  kubectl create -f hostpath.yaml 
+ 1840  kubectl get pods
+ 1841  kubectl describe pod hostdep-854d46d964-77rvt
+ 1842  kubectl get pods
+ 1843  kubectl get pods -o wide
+ 1844  kubectl exec -it hostdep-854d46d964-77rvt -c con1 -- bash
+ 1845  kubectl exec -it hostdep-854d46d964-77rvt -c con2 -- bash
+ 1846  kubectl exec -it hostdep-854d46d964-dxs2t -c con2 -- bash
+ 1847  kubectl delete -f hostpath.yaml 
+ 1848  kubectl get pod
+ 1849  kubectl create -f hostpath.yaml 
+ 1850  kubectl get pod -o wide
+ 1851  kubectl exec -it hostdep-854d46d964-59q2s -c con2 -- bash
+ 1852  vi hostpath.yaml 
+ 1853  init 0
+ 1854  kubectl get pods
+ 1855  kubectl delete deployments.apps hostdep 
+ 1856  kubectl get pods
+ 1857  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+ 1858  kubectl get svc -n kubernetes-dashboard
+ 1859  kubectl -n kubernetes-dashboard edit svc kubernetes-dashboard 
+ 1860  kubectl get svc -n kubernetes-dashboard
+ 1861  kubectl apply -f - <<EOF
+ 1862  apiVersion: v1
+ 1863  kind: Secret
+ 1864  metadata:
+ 1865    name: kubernetes-dashboard-secret
+ 1866    namespace: kubernetes-dashboard
+ 1867    annotations:
+ 1868      kubernetes.io/service-account.name: kubernetes-dashboard
+ 1869  type: kubernetes.io/service-account-token
+ 1870  EOF
+ 1871  kubectl get secrets 
+ 1872  kubectl get secrets -n kubernetes-dashboard
+ 1873  kubectl get clusterrole | grep "admin"
+ 1874  kubectl create clusterrolebinding dashboard-admin -n kubernetes-dashboard  --clusterrole=cluster-admin  --serviceaccount=kubernetes-dashboard:kubernetes-dashboard
+ 1875  kubectl describe secrets kubernetes-dashboard-secret -n kubernetes-dashboard
+ 1876  cd app
+ 1877  vi job.yaml
+ 1878  kubectl create -f job.yaml 
+ 1879  kubectl get job
+ 1880  kubectl get pod
+ 1881  kubectl delete deployments.apps mangoapp 
+ 1882  kubectl get pod
+ 1883  kubectl describe pod pi-t5n7g 
+ 1884  kubectl get pod
+ 1885  kubectl describe pod pi-t5n7g 
+ 1886  kubectl get pod
+ 1887  kubectl logs pi-t5n7g 
+ 1888  kubectl delete -f job.yaml 
+ 1889  vi job.yaml 
+ 1890  kubectl delete -f job.yaml 
+ 1891  kubectl create -f job.yaml 
+ 1892  kubectl get jobs.batch 
+ 1893  kubectl get pod
+ 1894  vi job.yaml 
+ 1895  kubectl get pod
+ 1896  kubectl delete -f job.yaml 
+ 1897  vi cronjob.yaml
+ 1898  kubectl create -f cronjob.yaml
+ 1899  kubectl get cronjobs.batch 
+ 1900  kubectl get nodes -o wide
+ 1901  kubectl get pod -n kube-system 
+ 1902  kubectl -n kube-system describe pod kube-scheduler-server
+ 1903  kubectl get pod -n kube-system 
+ 1904  kubectl -n kube-system describe pod etcd-server
+ 1905  kubectl get pod -n kube-system 
+ 1906  apt update
+ 1907  apt-cache madison kubeadm
+ 1908  apt-mark unhold kubeadm && apt-get update && apt-get install -y kubeadm=1.27.0-00 && apt-mark hold kubeadm
+ 1909  kubeadm version
+ 1910  kubectl version
+ 1911  systemctl status kubelet.service 
+ 1912  kubelet version
+ 1913  kubelet --version
+ 1914  kubeadm upgrade plan
+ 1915  kubeadm upgrade apply v1.27.7
+ 1916  apt-mark unhold kubeadm && apt-get update && apt-get install -y kubeadm=1.27.7-00 && apt-mark hold kubeadm
+ 1917  apt-cache madison kubeadm
+ 1918  apt clean
+ 1919  apt update
+ 1920  apt-cache madison kubeadm
+ 1921  apt-cache madison kubeadm | grep "1.27.*"
+ 1922  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.27/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+ 1923  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.27/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+ 1924  apt-cache madison kubeadm | grep "1.27.*"
+ 1925  apt update
+ 1926  apt-cache madison kubeadm | grep "1.27.*"
+ 1927  kubeadm upgrade plan
+ 1928  kubeadm upgrade apply v1.27.7
+ 1929  kubeadm upgrade apply v1.26.10
+ 1930  apt purge kubeadm
+ 1931  apt-get install -y kubeadm=1.26.10-00
+ 1932  apt-cache madison kubeadm | grep "1.26.*"
+ 1933  apt-cache madison kubeadm 
+ 1934  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.26/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+ 1935  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.26/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+ 1936  apt update
+ 1937  apt-cache madison kubeadm 
+ 1938  apt-get install -y kubeadm=1.26.10-00
+ 1939  apt-get install -y kubeadm=1.26.10-1.1
+ 1940  kubeadm upgrade plan
+ 1941  apt-cache madison kubeadm 
+ 1942  apt purge kubeadm
+ 1943  apt-get install -y kubeadm=1.26.3-1.1
+ 1944  kubeadm upgrade plan
+ 1945  kubeadm upgrade apply v1.26.10-1.1
+ 1946  kubeadm version
+ 1947  apt purge kubeadm 
+ 1948  #apt-get install -y kubeadm=1.26.10-00
+ 1949  apt-cache madison kubeadm 
+ 1950  #apt-get install -y kubeadm=1.26.10-1.1
+ 1951  apt-get install -y kubeadm=1.26.10-1.1
+ 1952  kubeadm upgrade apply v1.26.10-1.1
+ 1953  apt-cache madison kubeadm 
+ 1954  apt purge kubeadm 
+ 1955  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.26/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+ 1956  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.26/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+ 1957  apt update
+ 1958  apt-cache madison kubeadm 
+ 1959  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.27/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+ 1960  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.27/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+ 1961  apt update
+ 1962  apt-cache madison kubeadm 
+ 1963  apt-get install -y kubeadm=1.27.0-2.1
+ 1964  kubeadm upgrade plan
+ 1965  kubectl drain server --ignore-daemonsets --delete-local-data
+ 1966  kubectl get nodes
+ 1967  kubeadm version
+ 1968  apt purge kubeadm -y
+ 1969  apt-cache madison kubeadm 
+ 1970  apt-get install -y kubeadm=1.27.7-1.1
+ 1971  kubeadm upgrade apply v1.27.7
+ 1972  kubectl get nodes -o wide
+ 1973  apt upgrade kubelet=1.27.7
+ 1974  apt-cache madison kubeadm 
+ 1975  apt upgrade kubelet=1.27.7-1.1
+ 1976  systemctl daemon-reload
+ 1977  systemctl restart kubelet.service 
+ 1978  kubectl get nodes -o wide
+ 1979  kubectl uncordon server 
+ 1980  kubectl get nodes -o wide
+ 1981  kubectl create deployment mango --image nginx --port 80 --replicas 3
+ 1982  kubectl get pod -o wide
+ 1983  kubectl get node
+ 1984  init 0
+ 1985  cd app2/
+ 1986  ls
+ 1987  git init
+ 1996  ls
+ 1997  init 0
+ 1998  kubectl get nodes -o wide
+ 1999  kubectl drain node1 --ignore-daemonsets --delete-local-data
+ 2000  history 
+ 2001  kubectl get nodes -o wide
+ 2002  kubectl uncordon node1 
+ 2003  kubectl drain node2 --ignore-daemonsets --delete-local-data
+ 2004  kubectl get nodes -o wide
+ 2005  kubectl get nodes 
+ 2006  kubectl cordon node1 
+ 2007  kubectl get nodes 
+ 2008  kubectl uncordon node1 
+ 2009  kubectl get nodes 
+ 2010  kubectl uncordon node2
+ 2011  kubectl get nodes 
+ 2012  cd app
+ 2013  vi cluster-update.txt
+ 2014  vi dasboard.txt
+ 2015  history 
+ 2016  history > cmd-cluster-update.txt 
