@@ -1,0 +1,5 @@
+Thank you for using our application, for more detrails visit www.abc.com..
+
+to list pods use following command 
+kubectl get pods
+

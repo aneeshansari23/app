@@ -1,0 +1,7 @@
+
+replicaCount: 3
+
+container:
+  name: con1
+  image: httpd:latest
+  port: 80
